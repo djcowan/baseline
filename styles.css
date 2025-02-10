@@ -8,7 +8,7 @@
     --base-font-size: 1rem;
     --line-height: 1.4;
     --space-before: 1;
-    --space-after: 2;
+    --space-after: calc(var(--base-font-size) * 1.33);
     --indent-left: 2;
 }
 
@@ -17,8 +17,10 @@ html {
 }
 
 body {
+    background-color: antiquewhite;
     font-size: 1rem;
     line-height: var(--line-height);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h1,
@@ -31,11 +33,17 @@ p {
     margin-bottom: var(--space-after);
 }
 
+.view-baseline {
+    background-image: linear-gradient(to bottom, rgb(150, 207, 207) 0, transparent 1px);
+    background-repeat: repeat-y;
+    background-size: 100% var(--base-font-size);
+}
+
 .page {
+    background-color: ivory;
     container-type: inline-size;
     container-name: page;
     max-width: calc(var(--base-font-size) * 72);
-    margin: 1pc auto;
 }
 
 .masthead {
@@ -43,11 +51,17 @@ p {
 }
 
 
-.entry-section {
+.article {
     column-count: auto;
-    column-width: 32rem;
+    column-width: calc(var(--base-font-size) * 20);
     column-gap: 2rem;
-    column-rule: 1px solid #ccc;
+    column-rule: 1px solid color-mix(in hsl, currentColor %15, currentColor 0);
+    column-fill: balance;
+}
+
+.article > p:first-of-type {
+    column-span: all;
+    font-size: calc(var(--base-font-size) * 1.33);
 }
 
 .section-title {
