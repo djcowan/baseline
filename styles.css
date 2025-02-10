@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --base-font-size: 1rem;
+    --line-height: 1.4;
+    --space-before: 1;
+    --space-after: 2;
+    --indent-left: 2;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 1rem;
+    line-height: var(--line-height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: var(--space-after);
+}
+
+.page {
+    container-type: inline-size;
+    container-name: page;
+    max-width: calc(var(--base-font-size) * 72);
+    margin: 1pc auto;
+}
+
+.masthead {
+    text-align: center;
+}
+
+
+.entry-section {
+    column-count: auto;
+    column-width: 32rem;
+    column-gap: 2rem;
+    column-rule: 1px solid #ccc;
+}
+
+.section-title {
+    column-span: all;
+}
+
+.section-subtitle {
+    column-span: none;
+}
