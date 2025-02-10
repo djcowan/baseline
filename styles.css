@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: ivory;
     font-size: 1rem;
     line-height: var(--line-height);
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -40,7 +40,6 @@ p {
 }
 
 .page {
-    background-color: ivory;
     container-type: inline-size;
     container-name: page;
     max-width: calc(var(--base-font-size) * 72);
@@ -55,7 +54,7 @@ p {
     column-count: auto;
     column-width: calc(var(--base-font-size) * 20);
     column-gap: 2rem;
-    column-rule: 1px solid color-mix(in hsl, currentColor %15, currentColor 0);
+    column-rule: 1px solid color-mix(in hsl, currentColor 15%, currentColor 0%);
     column-fill: balance;
 }
 
